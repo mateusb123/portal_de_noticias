@@ -24,6 +24,7 @@
 ##### ------------- configServer.js
 ##### ------------- dbConnection.js
 ##### ------- server.js
+##### .gitignore
 ##### package.json
 ##### package-lock.json
 ##### README.md
