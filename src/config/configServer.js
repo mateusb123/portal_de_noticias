@@ -8,6 +8,9 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, '../app/views'));
 
-consign().include('app/routes').then('config/dbConnection.js').into(app);
+consign()
+    .include('app/routes')
+    .then('config/dbConnection.js')
+    .into(app);
 
 module.exports = app;
