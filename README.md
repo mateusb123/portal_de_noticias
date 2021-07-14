@@ -4,9 +4,6 @@
 
 ### MAPAS DE ARQUIVOS
 
-#### pasta: 9
-#### arquivos: 12
-
 ##### node_modules
 ##### src
 ##### ------- app
