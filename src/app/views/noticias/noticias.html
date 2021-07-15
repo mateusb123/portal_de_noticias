@@ -7,9 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <% for(var i = 0; i < noticias.length; i++) { %>
-        <h2><%= noticias[i].title %></h2>
-        <p><%= noticias[i].noticia %></p>
-    <% } %>
+    <table border="1">
+        <tr>
+            <% for(var i = 0; i < noticias.length; i++) { %>
+                <th><%= noticias[i].title %></th>          
+            <% } %>
+        <tr>
+        <tr>
+            <% for(var i = 0; i < noticias.length; i++) { %>
+                <th><%= noticias[i].noticia %></th>           
+            <% } %>
+        <tr>
+    </table>
 </body>
 </html>

@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Bem vindo a Area de Admin!</h2>
+    <h2>Adicionar Notiticia</h2>
+    <br>
+    <form action="/news/save" method="post">
+        <label>Titulo</label>
+        <input type="text" name="title" placeholder="titulo da noticia">
+        <br>
+
+        <label>Noticia</label>
+        <textarea name="content"></textarea>
+        <br>
+
+        <input type="submit" value="Adicionar">
+    </form>
 </body>
 </html>
