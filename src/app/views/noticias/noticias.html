@@ -12,12 +12,17 @@
             <% for(var i = 0; i < noticias.length; i++) { %>
                 <th><%= noticias[i].title %></th>          
             <% } %>
-        <tr>
+        </tr>
         <tr>
             <% for(var i = 0; i < noticias.length; i++) { %>
                 <th><%= noticias[i].noticia %></th>           
             <% } %>
+        </tr>
         <tr>
+            <% for(var i = 0;i < noticias.length;i++) { %>
+                <th><%= noticias[i].resume %></th>
+            <% } %>
+        </tr>
     </table>
 </body>
 </html>

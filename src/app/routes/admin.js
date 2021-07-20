@@ -1,13 +1,8 @@
 module.exports = function(app) {
     app.get('/admin', (req,res)=>{
-        res.render('admin/index');
+        app.app.controllers.admin.renderAdmin(app, req, res);
     });
     app.post('/news/save', (req,res)=>{
-        var newsData = req.body;
-        var connection = app.config.dbConnection();
-        var noticiasModel = new app.app.models.noticiasModel(connection);
-        noticiasModel.saveNews(newsData, (error, result) => {
-            res.redirect('/noticias');
-        });
+        app.app.controllers.admin.newsSave(app, req, res);
     });
 }
