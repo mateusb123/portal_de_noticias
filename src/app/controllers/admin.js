@@ -1,8 +1,7 @@
 module.exports.renderAdmin = function(app, req, res) {
 	res.render('admin/index', {validation: {},pastValues: {}});
 }
-module.exports.newsSave
- = function(app, req, res) {
+module.exports.newsSave = function(app, req, res) {
 	var newsData = req.body;
     var connection = app.config.dbConnection();
     var noticiasModel = new app.app.models.noticiasModel(connection);

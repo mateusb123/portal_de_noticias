@@ -8,7 +8,11 @@ module.exports.renderNoticias = function(app, req, res) {
 module.exports.renderNoticiaSingle = function(app, req, res) {
 	var connection = app.config.dbConnection();
     var noticiasModel = new app.app.models.noticiasModel(connection);
-    noticiasModel.getNoticia(14, function(error, result){
+
+    var id_noticia = req.query;
+
+    noticiasModel.getNoticia(id_noticia, function(error, result){
+        console.log(result)
         res.render('noticias/noticia', {noticia: result})
     });
 }

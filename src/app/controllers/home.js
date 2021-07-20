@@ -1,3 +1,8 @@
 module.exports.renderHome = function(app, req, res) {
-	res.render('home/index');
+	var connection = app.config.dbConnection();
+	var noticiasModel = new app.app.models.noticiasModel(connection);
+
+	noticiasModel.getUltimasNoticias((error, result)=>{
+		res.render('home/index', {values: result});
+	});
 }

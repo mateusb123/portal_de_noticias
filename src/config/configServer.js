@@ -9,6 +9,7 @@ const path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
+app.use(express.static(path.join(__dirname, '../app/public')));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, '../app/views'));
